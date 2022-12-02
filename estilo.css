@@ -1,0 +1,213 @@
+/* 
+
+  -=-=-=-=-parte inicial do estoque (aba para selecionar categoria e afins-=-=-=-=- 
+
+*/
+
+
+header {
+  background-color: #2c67be;
+  color: white;
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+li:hover {
+  background-color: #407ad0;
+}
+
+
+.containerA{
+  display: grid;
+  grid-template-areas:
+  "texto"
+  "barraA";
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.texto{
+  text-align: center;
+  margin-top: 120px;
+
+}
+
+.barraA{
+  width: 300px;
+  height: 35px;
+  background-color: rgb(216, 214, 213);
+  margin-top: 0px;
+  border-radius: 10px;
+  grid-area: "barraA";
+  grid-row: "barraA";
+}
+
+
+.dropbA {
+  background-color: rgb(216, 214, 213);
+  margin: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdownA {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownA-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdownA-content a {
+  color: rgb(0, 0, 0);
+  background-color: rgb(233, 232, 231);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownA-content a:hover {
+  background-color: rgb(203, 202, 201)
+
+}
+
+.dropdownA:hover .dropdownA-content {
+  display: block;
+  width: 300px;  
+}
+
+/* 
+
+  -=-=-=-=-parte para os produtos que fazem parte da categoria escolhida-=-=-=-=- 
+
+*/
+
+.containerB{
+  display: grid;
+  grid-template-areas:
+  "textoA textoA textoA textoA textoA textoA"
+  "barraB barraB barraB barraB barraB barraB"
+  "barraB barraB barraB barraB barraB barraB";
+  max-width: 1400px;
+  margin: 0 auto;
+  grid-gap: 25px;
+  grid-row-gap: 10px;
+
+}
+
+.textoA{
+  margin-top: 50px;
+  text-decoration-line: underline;
+  text-align: center;
+
+}
+
+.textoAB{
+  text-align: center;
+  margin-top: 4px;
+
+}
+
+.barraB{
+  width: 200px;
+  height: 35px;
+  background-color: rgb(216, 214, 213);
+  margin: auto;
+  border-radius: 10px;
+
+}
+
+/* 
+
+  -=-=-=-=-parte para a criação de itens-=-=-=-=- 
+
+*/
+
+.containerC{                                      
+  display: grid;
+  justify-items: center;
+  grid-gap: 0px;
+  align-items: center;
+  grid-template-areas:
+  "textob textob textob"
+  "barraC barraC barraC"
+  "textob textob textob";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  
+}
+
+.textob{
+  margin-top: 100px;
+  text-align: justify;
+  grid-area: "textob";
+}
+
+.barraC{
+  margin-top: 25px;
+  width: 200px;
+  height: 35px;
+  background-color: rgb(216, 214, 213);
+  display: flex;
+  border-radius: 10px;
+  grid-area: "barraC";
+}
+
+input[type=text] {
+  width: 200px;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+  border-radius: 10px;
+}
+
+/* 
+
+  -=-=-=-=-parte para o histórico-=-=-=-=- 
+
+*/
+
+.containerD{
+  display: grid;
+  grid-template-areas:
+  "textoAB2"
+  "his"
+  "his2";
+  max-width: 400px;
+  margin: 0 auto;
+
+}
+
+.his{
+  margin-top: 90px;
+  width: 400px;
+  height: 35px;
+  background-color: rgb(30, 68, 254);
+  margin: auto;
+  text-align: center;
+  border: 2px #000000 solid;
+  grid-area: "his";
+  grid-row: "his";
+}
+
+.his2{
+  margin-top: 90px;
+  width: 400px;
+  height: 400px;
+  background-color: rgb(215, 215, 215);
+  margin: auto;
+  border: 2px #000000 solid;
+  grid-area: "his2";
+  grid-row: "his2";
+}
+
+.textoAB2{
+  margin-top: 90px;
+  text-align: center;
+}
